@@ -1,1 +1,1 @@
-# CS361 Repository for Project
+# CS361 Project Repository
