@@ -1,1 +1,1 @@
-# CS361
+# CS361 Repository for Assignments
