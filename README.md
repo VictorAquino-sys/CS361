@@ -1,1 +1,1 @@
-# CS361 Repository for Assignments
+# CS361 Repository for Project
