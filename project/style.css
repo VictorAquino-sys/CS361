@@ -42,6 +42,14 @@ header p {
     margin-right: 6%;
 }
 
+.message-signup{
+    position: absolute;
+    left: 81%;
+    width: 14%;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .signin{
     width: 15%;
     background-color: #4ebb97;
