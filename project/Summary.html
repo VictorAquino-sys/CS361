@@ -2,28 +2,29 @@
 <html>
     <head>
             <meta charset="utf-8">
-            <title>Results Page</title>
+            <title>Summary</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" type="text/css" href="style.css" media="screen">
 
     </head>
     <body>
 
-        <div class="back-home">
-            <a href="index.html" class="previous">&#8249; Enter New Search</a>
-        </div>
-
         <div class="header-text">
             <header>
-                <p>RESULTS</p>
+                <p>SUMMARY</p>
             </header>
         </div>
 
-        <div class="container">
+        <div class="container-summary">
             
             <div class="results-amazon"> 
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">Amazon:</label><br>
+                <label for="vehicle1">Amazon</label><br><br>
+            </div>
+
+            <button class="deleteamazon"><label for="vehicle1">Delete</label></button><br>
+
+            <div class="message-warning">
+                <p>Warning! You will not be able to recover this file once you delete it.</p>
             </div>
 
             <div class="amazontable" style="overflow-x:auto;">
@@ -53,9 +54,10 @@
             </div>
             
             <div class="results-target"> 
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">Target:</label><br>
+                <label for="vehicle1">Target</label><br><br>
             </div>
+
+            <button class="deletetarget"><label for="vehicle1">Delete</label></button><br>
 
             <div class="targettable" style="overflow-x:auto;">
                 <table>
@@ -83,44 +85,8 @@
                 <button class="btn"><i class="fa fa-download"></i> Download.CSV</button>
             </div>
 
-            <div class="results-walmart"> 
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">Walmart:</label><br>
-            </div>
-
-            <div class="walmarttable" style="overflow-x:auto;">
-                <table>
-                  <tr>
-                    <th>DESCRIPTION</th>
-                    <th>PRICE</th>
-                    <th>RATING</th>
-                    <th>URL</th>
-                </tr>
-                <tr>
-                  <td>Nike size 11</td>
-                  <td>75</td>
-                  <td>4.4</td>
-                  <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
-                </tr>
-                <tr>
-                  <td>Nike size 11</td>
-                  <td>78</td>
-                  <td>4.1</td>
-                  <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
-                </table>
-            </div>
-
-            <div class="downloadwalmart">
-                <button class="btn"><i class="fa fa-download"></i> Download.CSV</button>
-            </div>
-
-            <div class="results-all"> 
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">Select All</label><br>
-            </div>
-
             <div class="results-save">
-                <a href="summary.html" class="savetoaccount">SAVE</a>
+                <a href="index.html" class="savetoaccount">RETURN HOME</a>
             </div>
 
         </div>

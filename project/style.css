@@ -389,3 +389,39 @@ background-color: RoyalBlue;
     top: 75%;
     left: 65%;
 }
+
+/* SUMMARY PAGE */
+.deleteamazon{
+    cursor: pointer;
+    position: absolute;
+    font-size: 22px;
+    width: 8%;
+    height: 3%;
+    top: 32%;
+    left: 20%;
+    background-color: red;
+    color: white;
+    border-color: aliceblue;
+}
+
+.deletetarget{
+    cursor: pointer;
+    position: absolute;
+    font-size: 22px;
+    width: 8%;
+    height: 3%;
+    top: 52%;
+    left: 20%;
+    background-color: red;
+    color: white;
+    border-color: aliceblue;
+}
+
+.message-warning{
+    position: absolute;
+    left: 17%;
+    top: 35%;
+    width: 14%;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
