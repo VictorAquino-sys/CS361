@@ -1,0 +1,219 @@
+HTML ,body{
+    font-family: roboto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: aliceblue;
+}
+
+.header-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-items: center; 
+    top: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+
+header p {
+    font-weight: 600;
+    font-family: system-ui;
+    font-size: 500%;
+    text-align: center;
+    margin: 0%;
+}
+
+.account{
+    position: relative;
+}
+
+.account button{
+    padding: 6px 10px;
+    font-size: 20px;
+    float: right;
+    margin-right: 6%;
+}
+
+.select-text{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 8%;
+}
+
+.select-text p{
+    position: relative;
+    text-align: center;
+    font-size: 200%;
+    margin: 0;
+}
+
+.box {
+    position: relative;
+    top: 10%;
+    height: 55%;
+    /* left: 48%; */
+}
+
+.click-container {
+    top: 8%;
+    height: 60%;
+    width: 10%;
+    position: absolute;
+    /* margin: 10%; */
+    left: 42%;
+}
+
+.button1 {
+    font-size: 120%;
+    position: relative;
+    left: 47.2%;    
+    padding: 6px 10px;
+}
+
+.button2 {
+    font-size: 120%;
+    position: relative;
+    left: 47.2%;    
+    padding: 6px 10px;    
+}
+
+.button3 {
+    font-size: 120%;
+    position: relative;
+    left: 45%;    
+    padding: 6px 10px; 
+}
+
+.button4 {
+    font-size: 120%;
+    position: relative;
+    left: 66%;    
+    padding: 6px 10px; 
+}
+
+.search-container {
+    font-size: 120%;
+    position: relative;
+    height: 25%;
+    top: 60%;
+    /* padding: 10px 10px; */
+}
+
+.search-box{
+    position: absolute;
+    top: 45%;
+    left: 36%;
+    width: 40%;
+}
+
+.search-container input{
+    padding: 2% 2%;
+    font-size: 18px;
+    width: 65%;
+}
+
+
+.go{
+    padding: 10px;
+    margin-left: 12px;
+    font-size: 80%;
+}
+
+.content {
+    position: absolute;
+    left: 40%;
+    top: 84%;
+}
+
+.help-tip{
+    position: absolute;
+    top: 72%;
+    left: 70%;
+    text-align: center;
+    background-color: #0083c4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    /* line-height: 26px; */
+    cursor: default;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    font-size: 30px;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #46d948;
+    padding: 10px;
+    width: 520px;
+    height: 120px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: 0px;
+    color: rgb(255, 254, 254);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    right:10px;
+    top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
