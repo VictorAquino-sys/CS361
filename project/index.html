@@ -5,6 +5,7 @@
             <title>Home Page</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+            <script src="/index.js" charset ="utf-8" defer></script>
 
     </head>
     <body>
@@ -48,8 +49,8 @@
               <div class="search-container">
                 <div class="search-box">
                   <form action="results.html">
-                    <input type="text" placeholder="Search one item at a time for best results.." name="search">
-                    <button class="go" type="submit">GO</button>
+                    <input class="channel-input" type="text" placeholder="Search one item at a time for best results.." name="search">
+                    <button class="go" type="submit" onclick="submitChannel()">GO</button>
                   </form>
                 </div>
               </div>
