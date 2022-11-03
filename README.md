@@ -10,7 +10,7 @@ $ npm install express --save
 node_modules directory 
 $ npm install body-parser --save
 
-MySQL Database
+MySQL Database 
 $npm install mysql
 
 Clone repository:
