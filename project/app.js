@@ -41,12 +41,12 @@ app.get('/', (req,res)=>{
     res.status(200).render("index");
 })
 
-app.get('/home', (req,res)=>{
+app.get('/results', (req,res)=>{
 
     db.con.query('SELECT * FROM product', function(error, rows, fields){
     // Save the products info
     // let people = rows;
-    return res.render('home', {data: rows});
+    return res.render('results', {data: rows});
     
     })
 
@@ -54,13 +54,13 @@ app.get('/home', (req,res)=>{
     // res.sendFile(__dirname + '/public/results.php');
 })
 
-app.post('/home', async (req, res) => {
+app.post('/results', async (req, res) => {
     let data = req.body;
     console.log(data);
     // const userstring = await scrapers.submitChannel()
     const channelData = await scrapers.scrapeChannel(data)
     // const creators = await db.insertCreator(channelData.name, channelData.price, channelData.score, req.body.channelURL)
-    res.redirect('/home');
+    res.redirect('/results');
 
 })
 
