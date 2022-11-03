@@ -57,11 +57,9 @@ app.get('/results', (req,res)=>{
 app.post('/results', async (req, res) => {
     let data = req.body;
     console.log(data);
-    // const userstring = await scrapers.submitChannel()
     const channelData = await scrapers.scrapeChannel(data)
-    // const creators = await db.insertCreator(channelData.name, channelData.price, channelData.score, req.body.channelURL)
     res.redirect('/results');
 
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
