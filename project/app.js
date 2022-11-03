@@ -1,17 +1,28 @@
 // const axios = require('axios')
-const express = require('express')
+// import express from 'express';
+const express = require('express');
+// import exphbs from 'express-handlebars';
+const exphbs = require('express-handlebars');
+// const db = require('./db');
 const app = express()
+
+// const { query } = require('express');
+app.set('view engine', '.hbs');                 // Tell express to use the handlebars engine whenever it encounters a *.hbs file.
+app.engine('.hbs', exphbs.engine({extname: ".hbs",defaultLayout:'main',layoutsDir: __dirname + '/views/layouts'}));  // Create an instance of the handlebars engine to process templates
+
+
+require('dotenv').config();
 
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-const port = 3000
+const port = process.env.PORT || 3000;
 
 
 const bodyParser = require('body-parser');
 
-const scrapers = require('./server/scrapers');
-const db = require('./server/db')
+const scrapers = require('./scrapers');
+const db = require('./db')
 
 app.use(bodyParser.json())
 app.use(function(req, res, next) {
@@ -21,29 +32,36 @@ app.use(function(req, res, next) {
 });
 
 //Static Files
-app.use(express.static('public')); //this is to serve our public folder as static
+app.use(express.static(__dirname + '/public')); //this is to serve our public folder as static
+// app.use(express.static(__dirname + '/server')); //this is to serve our public folder as static
 
 //API ROUTES
 
-app.get('/index', (req,res)=>{
-    res.sendFile(__dirname + '/public/index.html');
+app.get('/', (req,res)=>{
+    res.status(200).render("index");
 })
 
-app.get('/creators', async (req, res) => {
-    const creators = await db.getAllCreators();
-    // const creators = [
-    //     {name: 'balck', img: 'https://'},
-    //     {name: 'dave lee', img: 'https://'},
-    // ]
+app.get('/home', (req,res)=>{
 
-    res.send(creators)
+    db.con.query('SELECT * FROM product', function(error, rows, fields){
+    // Save the products info
+    // let people = rows;
+    return res.render('home', {data: rows});
+    
+    })
+
+
+    // res.sendFile(__dirname + '/public/results.php');
 })
 
-app.post('/creators', async (req, res) => {
-    console.log(req.body.userURL);
-    const channelData = await scrapers.scrapeChannel(req.body.userURL)
-    const creators = await db.insertCreator(channelData.name, channelData.avatarURL, req.body.channelURL)
-    res.send('success');
+app.post('/home', async (req, res) => {
+    let data = req.body;
+    console.log(data);
+    // const userstring = await scrapers.submitChannel()
+    const channelData = await scrapers.scrapeChannel(data)
+    // const creators = await db.insertCreator(channelData.name, channelData.price, channelData.score, req.body.channelURL)
+    res.redirect('/home');
+
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

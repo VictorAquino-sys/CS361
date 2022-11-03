@@ -259,7 +259,7 @@ label p{
 }
 
 
-/* RESULTS.HTML */
+/* RESULTS.hbs */
 
 .back-home a {
     cursor: pointer;
@@ -285,8 +285,8 @@ a:hover {
 /* container */
 .results-amazon{
     position: absolute;
-    left: 20%;
-    top: 25%;
+    left: 13%;
+    top: 22%;
     font-size: 30px;
 }
 
@@ -305,6 +305,7 @@ a:hover {
 }
 
 .results-all{
+    display: none;
     position: absolute;
     left: 20%;
     top: 90%;
@@ -335,7 +336,7 @@ a:hover {
   /* TABLE FOR AMAZON */
 .amazontable{
     top: 32%;
-    left: 35%;
+    left: 15%;
     position: absolute;
 }
 
@@ -345,22 +346,25 @@ padding: 4px;
 }
 
 .targettable{
+    display: none;
     top: 52%;
-    left: 35%;
+    left: 25%;
     position: absolute;
 }
 
 .walmarttable{
+    display: none;
     top: 72%;
-    left: 35%;
+    left: 25%;
     position: absolute;
 }
 
 /* DOWNLOAD BUTTON */
 .downloadamazon{
-    position: absolute;
+    display: none;
+    position: absolute; 
     top: 35%;
-    left: 65%;
+    left: 80%;
 }
 
 
@@ -379,12 +383,14 @@ background-color: RoyalBlue;
 }
 
 .downloadtarget{
+    display: none;
     position: absolute;
     top: 55%;
     left: 65%;
 }
 
 .downloadwalmart{
+    display: none;
     position: absolute;
     top: 75%;
     left: 65%;
