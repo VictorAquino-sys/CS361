@@ -39,7 +39,7 @@
                                 <a href="{{this.url}}">Click here!</a>
                             </td>
                         </tr>  
-                        {{/each}}                         
+                        {{/each}}                   
                         <!-- <tr>
                             <td>Nike size 11</td>
                             <td>85</td>
@@ -61,23 +61,29 @@
 
             <div class="targettable" style="overflow-x:auto;" style="display:none">
                 <table>
-                  <tr>
-                    <th>DESCRIPTION</th>
-                    <th>PRICE</th>
-                    <th>RATING</th>
-                    <th>URL</th>
-                </tr>
-                <tr>
-                  <td>Nike size 11</td>
-                  <td>79</td>
-                  <td>4.3</td>
-                  <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
-                </tr>
-                <tr>
-                  <td>Nike size 11</td>
-                  <td>83</td>
-                  <td>3.9</td>
-                  <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>PRICE</th>
+                            <th>RATING</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr>
+                        {{#each data}}
+                            <td>{{this.id}}</td>
+                            <td>{{this.title}}</td>
+                            <td>{{this.price}}</td>
+                            <td>{{this.score}}</td>
+                            <td>
+                                <a href="{{this.url}}">Click here!</a>
+                            </td>
+                        </tr>  
+                        {{/each}}                   
+                    </tbody>
                 </table>
             </div>
 
@@ -85,30 +91,36 @@
                 <button class="btn"><i class="fa fa-download"></i> Download.CSV</button>
             </div>
 
-            <div class="results-walmart" style="display:none"> 
+            <div class="results-walmart"> 
                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                 <label for="vehicle1">Walmart:</label><br>
             </div>
 
             <div class="walmarttable" style="overflow-x:auto;">
                 <table>
-                  <tr>
-                    <th>DESCRIPTION</th>
-                    <th>PRICE</th>
-                    <th>RATING</th>
-                    <th>URL</th>
-                </tr>
-                <tr>
-                  <td>Nike size 11</td>
-                  <td>75</td>
-                  <td>4.4</td>
-                  <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
-                </tr>
-                <tr>
-                  <td>Nike size 11</td>
-                  <td>78</td>
-                  <td>4.1</td>
-                  <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
+                  <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>PRICE</th>
+                            <th>RATING</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                        {{#each data}}
+                            <td>{{this.id}}</td>
+                            <td>{{this.title}}</td>
+                            <td>{{this.price}}</td>
+                            <td>{{this.score}}</td>
+                            <td>
+                                <a href="{{this.url}}">Click here!</a>
+                            </td>
+                        </tr>  
+                        {{/each}}
+                    </tbody>
                 </table>
             </div>
 

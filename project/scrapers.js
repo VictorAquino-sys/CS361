@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 const db = require('./db');
 
 async function scrapeChannel(url) {
-    // var receiveurl = Object.values(url);
     var receiveurl = JSON.stringify(url);   
     console.log('test: ' + receiveurl);
     var channelURL = receiveurl.replace(/ /g, '+');
