@@ -25,6 +25,7 @@
                             <th>PRICE</th>
                             <th>RATING</th>
                             <th>URL</th>
+                            <th>DELETE</th>
                         </tr>
                     </thead>
 
@@ -38,14 +39,9 @@
                             <td>
                                 <a href="{{this.url}}">Click here!</a>
                             </td>
+                            <td><button onClick="deleteProduct('this.id')">delete</button></td>
                         </tr>  
                         {{/each}}                   
-                        <!-- <tr>
-                            <td>Nike size 11</td>
-                            <td>85</td>
-                            <td>3.9</td>
-                            <th><a href="https://www.amazon.com/ref=nav_logo">Click here!</a></th>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -91,12 +87,12 @@
                 <button class="btn"><i class="fa fa-download"></i> Download.CSV</button>
             </div>
 
-            <div class="results-walmart"> 
+            <div class="results-walmart" style="display:none"> 
                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                 <label for="vehicle1">Walmart:</label><br>
             </div>
 
-            <div class="walmarttable" style="overflow-x:auto;">
+            <div class="walmarttable" style="overflow-x:auto;" style="display:none">
                 <table>
                   <thead>
                         <tr>
@@ -138,3 +134,19 @@
             </div>
 
         </div>
+
+    <div id="delete" style='display:none'>
+    <form method="POST" id="deleteproduct" action="/delete_product">
+      <legend><strong>Delete Product</strong></legend>
+        <fieldset class="fields">
+          <p>Are you sure you wish to delete the following?</p>
+          <select name="delete-name_product" id="input-user-dropbox">
+            <option value="">Select Title</option>
+            {{#each data}} 
+            <option value="{{this.id}}"> {{this.title}} {{this.price}} {{this.score}}</option>
+            {{/each}}
+          </select>
+      </fieldset>
+        <input class="btn" type="submit" id="deleteproduct" value="Submit" onClick="deleteProduct()">
+        <input class="btn" type="button" value="Cancel" onClick="deleteProduct()">
+    </form>

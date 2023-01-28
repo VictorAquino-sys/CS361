@@ -336,7 +336,7 @@ a:hover {
   /* TABLE FOR AMAZON */
 .amazontable{
     top: 32%;
-    left: 15%;
+    left: 5%;
     position: absolute;
 }
 
@@ -430,4 +430,16 @@ background-color: RoyalBlue;
     width: 14%;
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#delete{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+}
+
+.last.modified{
+    position: absolute;
+    font-size: 12px;
+    top: 99%;
 }
